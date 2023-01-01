@@ -39,7 +39,7 @@ void RIT_IRQHandler (void)
 	static int right=0;	
 		
 	
-	if((LPC_GPIO1->FIOPIN & (1<<25)) == 0){ //select
+	if((LPC_GPIO1->FIOPIN & (1<<29)) == 0){ //up
 		select++;
 		switch(select){
 			case 1:
@@ -127,12 +127,7 @@ void RIT_IRQHandler (void)
 		}
 	}
 	
-	if((LPC_GPIO1->FIOPIN & (1<<29)) == 0){//up
-		right=left=0;
-		LCD_DrawRectangle_empty(120,270,240,50,Black);
-		LCD_DrawRectangle_empty(0,270,120,50,Black);
-		
-	}
+
 	
 	if((LPC_GPIO1->FIOPIN & (1<<26)) == 0){//down
 		right=left=0;

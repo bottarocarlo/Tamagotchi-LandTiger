@@ -142,11 +142,7 @@ void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r, uint16_t color){
 }
 
 void delete_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color){
-	
-	if(lingua==1){
-		drawer_animation(Xpos,Ypos);
-	}
-	draw_tamagocy(Xpos,Ypos,r,color);
+	LCD_DrawRectangle(Xpos,Ypos,100,100,White);
 }
 
 void runaway_sequence(void){

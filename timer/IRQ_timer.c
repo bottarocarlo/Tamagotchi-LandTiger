@@ -54,7 +54,7 @@ void TIMER0_IRQHandler (void)
 		}
 		
 		
-		sprintf(a,"  Age: %02d:%02d:%02d",hours,minutes,seconds);
+		sprintf(a,"  Turtwig: %02d:%02d:%02d",hours,minutes,seconds);
 		
 		GUI_Text(60,0,(uint8_t *)a,Blue,White);
 		
