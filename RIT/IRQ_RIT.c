@@ -40,7 +40,7 @@ void RIT_IRQHandler (void)
 		
 	
 	if((LPC_GPIO1->FIOPIN & (1<<25)) == 0){ //select
-			select++;
+		select++;
 		switch(select){
 			case 1:
 				

@@ -39,13 +39,11 @@ void draw_linguaccia(){
 	
 	if(lingua==0){
 		lingua=1;
-		//LCD_Clear(White);
 		drawer_animation(xc,yc);
 	}
 	else{
-		//LCD_Clear(White);
-		lingua=0;
 		drawer(xc,yc);
+		lingua=0;
 		//LCD_DrawLine(xc,yc,160,210,Black);
 	}
 }
@@ -54,11 +52,19 @@ void draw_mouth(uint16_t x0,uint16_t y0,uint16_t x1,uint16_t y1,uint16_t color){
 	LCD_MyDrawLine(x0,y0,x1,y1,color);
 }
 
-
+void draw_eye_rectangle(uint16_t x0,uint16_t y0,uint16_t lenght,uint16_t height,uint16_t color){
+	
+	LCD_DrawRectangle_empty(x0,y0,lenght,height,color);
+	
+	LCD_DrawCircle(x0+20,y0+23,5,color);
+	
+}
 
 void draw_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color){
-
+	
 	drawer(Xpos,Ypos);
+	
+
 	
 }
 
@@ -66,7 +72,6 @@ void draw_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color){
 void draw_tamagocy_hungry(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color){
 	
 	drawer_hungry(Xpos,Ypos);
-	
 	
 	
 }
@@ -84,19 +89,19 @@ void draw_menu(){
 	
 	//coomands
 	LCD_DrawRectangle_empty(0,270,120,50,Black);
-	GUI_Text(15, 280, (uint8_t *) " MEAL  ", Blue,White);
+	GUI_Text(15, 280, (uint8_t *) " MEAL  ", Black,White);
 	LCD_DrawRectangle_empty(120,270,240,50,Black);
-	GUI_Text(135, 280, (uint8_t *) " SNACK  ", Blue,White);
+	GUI_Text(135, 280, (uint8_t *) " SNACK  ", Black,White);
 	
 	
-	GUI_Text(happines_x_pos, 25, (uint8_t *) "Happiness  ", Blue,White);
+	GUI_Text(happines_x_pos, 25, (uint8_t *) "Happiness  ", Black,White);
 	LCD_DrawRectangle_empty(happines_x_pos-1,bars_y_pos-1,bar_lenght,bar_height,Green);
 	//add_green_bar_happy();
 	//add_green_bar_happy();
 	//add_green_bar_happy();
 	add_green_bar_happy();
 	
-	GUI_Text(satiety_x_pos, 25, (uint8_t *) "Satiety  ", Blue,White);
+	GUI_Text(satiety_x_pos, 25, (uint8_t *) "Satiety  ", Black,White);
 	LCD_DrawRectangle_empty(satiety_x_pos-1,bars_y_pos-1,bar_lenght,bar_height,Green);
 	//add_green_bar_satiety();
 	//add_green_bar_satiety();
@@ -159,7 +164,7 @@ void runaway_sequence(void){
 	
 	
 	dead=1;
-	for(i=0;i<MAX_X+radius;i+=18){
+	for(i=0;i<MAX_X+radius;i+=16){
 		
 		draw_tamagocy(xc+i,yc,radius,Black);
 	
