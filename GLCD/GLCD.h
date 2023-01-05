@@ -98,7 +98,7 @@ void GUI_Text(uint16_t Xpos, uint16_t Ypos, uint8_t *str,uint16_t Color, uint16_
 void LCD_DrawRectangle(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t height , uint16_t color );
 void LCD_DrawRectangle_empty(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t height , uint16_t color );
 
-void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color);
+void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color,int orientation);
 void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color);
 void LCD_DrawSemiCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation);
 void LCD_DrawSemiCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation);

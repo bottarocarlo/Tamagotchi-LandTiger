@@ -29,113 +29,40 @@ extern int dead;
 
 extern int seconds,hours,minutes;
 
-
+volatile int select,left,right;
+volatile int left = 0;
+volatile int right=0;	
 
 
 void RIT_IRQHandler (void)
 {			
-	static int select=0;
-	static int left = 0;
-	static int right=0;	
-		
 	
-	if((LPC_GPIO1->FIOPIN & (1<<29)) == 0){ //up
-		select++;
-		switch(select){
-			case 1:
-				
-				if(left){
-					left=0;
-					LCD_DrawRectangle_empty(0,270,120,50,Green);
-					LCD_DrawRectangle_empty(0,270,120,50,Black);
-					NVIC_DisableIRQ(RIT_IRQn);
-					
-					
-					eat_meal();
-					add_green_bar_satiety();
-					reset_RIT();
-					NVIC_EnableIRQ(RIT_IRQn);
-					
-				}
-				if(right){
-					right=0;
-					LCD_DrawRectangle_empty(120,270,240,50,Green);
-					LCD_DrawRectangle_empty(120,270,240,50,Black);
-					
-					NVIC_DisableIRQ(RIT_IRQn);
-					
-					eat_snack();
-					
-					add_green_bar_happy();
-					reset_RIT();
-					NVIC_EnableIRQ(RIT_IRQn);
-					
-				}
-				if(dead){
-					dead=0;
-					seconds=minutes=hours=0;
-					LCD_DrawRectangle_empty(0,270,240,50,Green);
-					LCD_Clear(White);
-					create_tamagochy(120,160,90,Black);
-					
-					reset_timer(TIMER0_IRQn);
-				
-					NVIC_EnableIRQ(TIMER0_IRQn);
-				}
-				
-				
-				break;
-			default:
-				break;
-		}
+
+	if((LPC_GPIO1->FIOPIN & (1<<29)) == 0){ //select
+			select++;
+		
 	}
-	else{
-			select=0;
-	}
+	
+
 	
 	
 	if((LPC_GPIO1->FIOPIN & (1<<27)) == 0){ //left
 
-		left++;
-		
-		switch(left){
-			case 1:
-						right=0;
-						LCD_DrawRectangle_empty(120,270,240,50,Black);
-						LCD_DrawRectangle_empty(0,270,120,50,Red);
-			break;
-			default:
-				break;
-		
-		}
-	}
 	
 		
+		left++;
+		right=0;
+	
+	}
+	
 	
 	if((LPC_GPIO1->FIOPIN & (1<<28)) == 0){//right
 		right++;
+		left=0;
 		
-		switch(right){
-			case 1:
-						left=0;
-						LCD_DrawRectangle_empty(0,270,120,50,Black);
-						LCD_DrawRectangle_empty(120,270,240,50,Red);
-			break;
-			default:
-				break;
-		
-		}
 	}
 	
 
-	
-	if((LPC_GPIO1->FIOPIN & (1<<26)) == 0){//down
-		right=left=0;
-		LCD_DrawRectangle_empty(120,270,240,50,Black);
-		LCD_DrawRectangle_empty(0,270,120,50,Black);
-		
-	}
-	
  reset_RIT();
  LPC_RIT->RICTRL |= 0x1;	/* clear interrupt flag */
 	

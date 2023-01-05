@@ -35,8 +35,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r, uint16_t color);
 void draw_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color);
-void delete_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color);
-void draw_tamagocy_hungry(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color);
+
 void draw_menu(void);
 void draw_linguaccia(void);
 
@@ -45,6 +44,8 @@ void remove_green_bar_happy(void);
 void add_green_bar_satiety(void);
 void remove_green_bar_satiety(void);
 void runaway_sequence(void);
+
+void eat(void);
 
 #endif 
 

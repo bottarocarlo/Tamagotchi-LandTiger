@@ -473,11 +473,6 @@
               <FileType>1</FileType>
               <FilePath>.\tamagocy.c</FilePath>
             </File>
-            <File>
-              <FileName>tamagocy.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\tamagocy.h</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -503,11 +498,6 @@
         <Group>
           <GroupName>joystick</GroupName>
           <Files>
-            <File>
-              <FileName>funct_joystick.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\joystick\funct_joystick.c</FilePath>
-            </File>
             <File>
               <FileName>joystick.h</FileName>
               <FileType>5</FileType>

@@ -31,7 +31,6 @@
 /* Private variables ---------------------------------------------------------*/
 static uint8_t LCD_Code;
 /*----------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------*/
 /* GIMP RGBA C-Source image dump (frame_0_delay-0.5s.c) */
 
 #define GIMP_IMAGE_WIDTH (46)
@@ -1317,7 +1316,6 @@ void GUI_Text(uint16_t Xpos, uint16_t Ypos, uint8_t *str,uint16_t Color, uint16_
     while ( *str != 0 );
 }
 
-
 void drawer (uint16_t posX,uint16_t posY){
 	int x,y,i,color;
 	int w= GIMP_IMAGE_WIDTH;
@@ -1415,23 +1413,35 @@ void LCD_DrawRectangle_empty(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t
 	
 }
 
-void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color){
-	LCD_SetPoint(xc+x,yc+y,color);
-	LCD_SetPoint(xc+x,yc-y,color);
-	LCD_SetPoint(xc-x,yc+y,color);
-	LCD_SetPoint(xc-x,yc-y,color);
-	LCD_SetPoint(xc+y,yc+x,color);
-	LCD_SetPoint(xc+y,yc-x,color);
-	LCD_SetPoint(xc-y,yc+x,color);
-	LCD_SetPoint(xc-y,yc-x,color);
+void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color,int orientation)
+{
+	if(orientation==1 || orientation==0){
+		LCD_SetPoint(xc-x,yc+y,color);
+		LCD_SetPoint(xc-y,yc+x,color);
+		LCD_SetPoint(xc+x,yc+y,color);
+		LCD_SetPoint(xc+y,yc+x,color);
+		
+		
+		
+	}
+	if(orientation==2 || orientation==0){
+		LCD_SetPoint(xc+x,yc-y,color);
+	
+		LCD_SetPoint(xc-x,yc-y,color);
+		LCD_SetPoint(xc+y,yc-x,color);
+	
+		LCD_SetPoint(xc-y,yc-x,color);
+	}
 }
 
-void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
+
+void LCD_DrawSemiCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation)
+{
 	int x=0;
 	int y=radius;
 	int p=1-radius;
 	
-	pixel(Xpos,Ypos,x,y, color);
+	pixel(Xpos,Ypos,x,y, color,orientation);
 	
 	while(x<y)
 	{
@@ -1446,11 +1456,16 @@ void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t
 			y--;
 			p=p+2*(x-y)+1;
 		}
-		pixel(Xpos,Ypos,x,y, color);
+		pixel(Xpos,Ypos,x,y, color,orientation);
 	}
 }
 
-
+void LCD_DrawCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color)
+{
+	
+	LCD_DrawSemiCircle_empty(Xpos,Ypos,radius,color,0);
+	
+}
 
 void LCD_DrawSemiCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation){
 	
@@ -1475,34 +1490,6 @@ void LCD_DrawSemiCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t c
 
 
 
-
-void LCD_DrawSemiCircle_empty(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color,int orientation){
-	
-	volatile double distance=0;
-    float i,j;
-	
-
-	
-     for(i=Xpos-radius;i<=Xpos+radius;i+=0.1){
-			for(j=Ypos-radius;j<=Ypos+radius;j+=0.1){
-        distance=((i-Xpos)*(i-Xpos))+((Ypos-j)*(Ypos-j));
-        if(distance==radius*radius && orientation==1 &&j>=Ypos){
-            LCD_SetPoint(i,j,color);
-        }
-				if(distance==radius*radius && orientation==2 &&j<=Ypos){
-            LCD_SetPoint(i,j,color);
-        }
-				}
-		}
-}
-
-
-
-
-
-
-
-
 void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
 	
 	volatile double distance=0;
@@ -1520,6 +1507,24 @@ void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color
 		}
 }
 
+/*void LCD_DrawCircle_empty(uint16_t x0,uint16_t y0, uint16_t radius, uint16_t color){
+	
+	volatile double distance=0;
+    volatile uint16_t i,j;
+	
+
+	 
+    for(i=0;i<MAX_X;i++){
+			for(j=0;j<MAX_Y;j++){
+        distance=((i-x0)*(i-x0))+((y0-j)*(y0-j));
+        if(distance==radius*radius){
+            LCD_SetPoint(i,j,color);
+        }
+    }
+	}    	
+	
+}
+*/
 
 
 void LCD_MyDrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color) {

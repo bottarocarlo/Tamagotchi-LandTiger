@@ -27,51 +27,34 @@
 volatile int seconds=0;
 volatile int minutes=0;
 volatile int hours=0;
-volatile int flag=0;
-extern int dead;
 
+extern int time;
 
 
 void TIMER0_IRQHandler (void)
 {
-	char a[200];
+
 
 	
 	
 	//Match register 0 interrupt service routine 
 	if (LPC_TIM0->IR & 01)
 	{
+		
 		if(seconds>59){
 			seconds=0;			
-			//reset timer
+			
 			if(minutes>59){
 				minutes=0;		
-				//reset timer
+				
 				hours++;
 			}
 			minutes++;
-		
-		}
-		
-		
-		sprintf(a,"  Turtwig: %02d:%02d:%02d",hours,minutes,seconds);
-		
-		GUI_Text(60,0,(uint8_t *)a,Blue,White);
-		
-		//linguaccia
-		draw_linguaccia();
-		
-		
-		//flag usato per non far ridurre la barra all'inizio
-		if(seconds%5==0 && flag){
-			remove_green_bar_happy();
-			if(dead){return;}
-			remove_green_bar_satiety();
-			if(dead){return;}
-
+			
 		}
 		seconds++;
-		flag=1;
+		time=1;
+		
 		
 		LPC_TIM0->IR = 1;			/* clear interrupt flag */
 	}
