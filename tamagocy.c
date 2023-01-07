@@ -282,8 +282,8 @@ void draw_menu(){
 	
 	GUI_Text(happines_x_pos, 25, (uint8_t *) "Happiness  ", Black,White);
 	LCD_DrawRectangle_empty(happines_x_pos-1,bars_y_pos-1,bar_lenght,bar_height,Black);
-	//add_green_bar_happy();
-	//add_green_bar_happy();
+	add_green_bar_happy();
+	add_green_bar_happy();
 	add_green_bar_happy();
 	add_green_bar_happy();
 	
@@ -339,13 +339,11 @@ void runaway_sequence(void){
 	//animazione per l'uscita
 	
 	//delete_tamagocy(xc,yc,radius,White);
-	LCD_DrawRectangle(xc-radius,yc-radius,radius*2 +1,radius*2+1,White);
+	//LCD_DrawRectangle(xc-radius,yc-radius,radius*2 +1,radius*2+1,White);
 	
 	for(i=0;i<MAX_X+radius;i+=16){
 		
 		draw_tamagocy(xc+i,yc,radius,Black);
-	
-		draw_tamagocy(xc+i,yc,radius,White);
 		
 	}
 	
@@ -375,7 +373,7 @@ void runaway_sequence(void){
 		
 	GUI_Text(60,0,(uint8_t *)a,Black,White);
 	
-	GUI_Text(80,220 , (uint8_t *) "Look my friend has     gone... Not a great job      dont't you think? ", Red,White);
+	GUI_Text(80,220 , (uint8_t *) "Oh f***k... ", Red,White);
 
 	
 }

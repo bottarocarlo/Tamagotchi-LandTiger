@@ -77,7 +77,7 @@ F (.\GLCD\HzLib.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\
 I (GLCD\HzLib.h)(0x63B6991A)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 F (.\GLCD\HzLib.h)(0x63B6991A)()
-F (.\tamagocy.c)(0x63B6A536)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\tamagocy.o --omf_browse .\tamagocy.crf --depend .\tamagocy.d)
+F (.\tamagocy.c)(0x63B985BB)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\tamagocy.o --omf_browse .\tamagocy.crf --depend .\tamagocy.d)
 I (GLCD/GLCD.h)(0x63B69CAB)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\sample.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\sample.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Thu Jan 05 11:40:22 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Sat Jan 07 15:46:24 2023
 <BR><P>
 <H3>Maximum Stack Usage =        504 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -638,8 +638,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_SetPoint
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;runaway_sequence
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remove_green_bar_satiety
+<BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remove_green_bar_satiety
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;remove_green_bar_happy
 <LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;eat
 <LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;add_green_bar_satiety
@@ -797,7 +796,7 @@ Global Symbols
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;action_selected
 </UL>
 
-<P><STRONG><a name="[84]"></a>draw_menu</STRONG> (Thumb, 246 bytes, Stack size 232 bytes, tamagocy.o(.text))
+<P><STRONG><a name="[84]"></a>draw_menu</STRONG> (Thumb, 254 bytes, Stack size 232 bytes, tamagocy.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 408 + Unknown Stack Size
 <LI>Call Chain = draw_menu &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint &rArr; LCD_SetCursor
 </UL>
@@ -821,13 +820,12 @@ Global Symbols
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;action_selected
 </UL>
 
-<P><STRONG><a name="[5f]"></a>runaway_sequence</STRONG> (Thumb, 360 bytes, Stack size 224 bytes, tamagocy.o(.text))
+<P><STRONG><a name="[5f]"></a>runaway_sequence</STRONG> (Thumb, 310 bytes, Stack size 224 bytes, tamagocy.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 400 + Unknown Stack Size
 <LI>Call Chain = runaway_sequence &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint &rArr; LCD_SetCursor
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;draw_tamagocy
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawRectangle
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_DrawRectangle_empty
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Text

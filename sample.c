@@ -133,12 +133,10 @@ void update_time(void){
 		GUI_Text(60,0,(uint8_t *)a,Black,White);
 }
 void update_status_bar(){
-		
 		if(seconds%5==0){
 			remove_green_bar_happy();
 			remove_green_bar_satiety();
 		}
-	
 }
 
 void 	action_selected(){
