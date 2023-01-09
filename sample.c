@@ -56,7 +56,7 @@ int main(void)
 	
 	
 
-	create_tamagochy(120,160,80,Black);
+	create_tamagochy(120,160,80);
 	
 	init_RIT(0x004C4B40);									/* RIT Initialization 50 msec       */
 	
@@ -78,7 +78,7 @@ int main(void)
 			time=0;
 			update_time();
 			//linguaccia
-			draw_linguaccia();
+			draw_animazione();
 			
 			update_status_bar();
 			if(dead){
@@ -147,7 +147,7 @@ void 	action_selected(){
 					seconds=minutes=hours=0;
 					LCD_DrawRectangle_empty(0,270,240,50,Green);
 					LCD_Clear(White);
-					create_tamagochy(120,160,90,Black);
+					create_tamagochy(120,160,90);
 					
 				}
 	if(left){

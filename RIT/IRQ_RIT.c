@@ -42,27 +42,21 @@ void RIT_IRQHandler (void)
 			select++;
 		
 	}
-	
 
-	
 	
 	if((LPC_GPIO1->FIOPIN & (1<<27)) == 0){ //left
-
-	
 		
 		left++;
 		right=0;
 	
 	}
-	
-	
+		
 	if((LPC_GPIO1->FIOPIN & (1<<28)) == 0){//right
 		right++;
 		left=0;
 		
 	}
 	
-
  reset_RIT();
  LPC_RIT->RICTRL |= 0x1;	/* clear interrupt flag */
 	

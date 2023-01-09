@@ -182,7 +182,7 @@ void draw_food(uint16_t xi,int yi,uint16_t color){
 	}
 }
 
-void draw_linguaccia(){
+void draw_animazione(){
 	
 	
 	if(lingua==0){
@@ -196,42 +196,6 @@ void draw_linguaccia(){
 	}
 }
 
-void draw_mouth(uint16_t Xpos,uint16_t Ypos,uint16_t color){
-	if(lingua==1){
-		draw_linguaccia();
-	}
-	
-	if(hungry==1){
-		LCD_DrawSemiCircle_empty(Xpos,Ypos+10,radius-40,color,1);
-	}
-	else if(eating==1){
-			LCD_DrawCircle_empty(Xpos,Ypos+40,30,color);
-	}
-	else{
-		LCD_MyDrawLine(Xpos-40,Ypos+45,Xpos+40,Ypos+45,color);
-	}
-	
-}
-void draw_eye(uint16_t Xpos,uint16_t Ypos,uint16_t lenght,uint16_t height,uint16_t color){
-	
-	if(eating==1){
-		LCD_DrawSemiCircle_empty(Xpos-20,Ypos-30,20,color,2);
-		LCD_DrawSemiCircle_empty(Xpos+24,Ypos-30,20,color,2);
-		
-	}
-	else if(dead==1){
-			LCD_DrawTriangle(Xpos-50,Ypos-10,Xpos-50,Ypos-40,Xpos-10,Ypos-10,color);
-			LCD_DrawTriangle(Xpos+10,Ypos-10,Xpos+50,Ypos-40,Xpos+50,Ypos-10,color);
-	}
-
-	else{
-		LCD_DrawRectangle_empty(Xpos-50,Ypos-50,lenght,height,color);
-		LCD_DrawCircle(Xpos-30,Ypos-27,5,color);
-
-		LCD_DrawRectangle_empty(Xpos+10,Ypos-50,lenght,height,color);
-		LCD_DrawCircle(Xpos+30,Ypos-27,5,color);
-	}
-}
 
 void eat(void){
 	
@@ -239,20 +203,20 @@ void eat(void){
 	uint16_t max_x=50;
 	draw_food(0,0,Blue);
 	for(i=1;i<max_x;i+=10){
-		draw_tamagocy(xc-i,yc,radius,Black);
+		draw_tamagocy(xc-i,yc);
 	}
 	LCD_DrawRectangle(30,210,50,50,White);
 	for(i=1;i<50;i+=15){
-		draw_tamagocy(xc-max_x+i,yc,radius,Black);
+		draw_tamagocy(xc-max_x+i,yc);
 	}
-	draw_tamagocy(xc,yc,radius,Black);
+	draw_tamagocy(xc,yc);
 	
 }
 
 
 
 
-void draw_tamagocy(uint16_t Xpos,uint16_t Ypos, uint16_t r,uint16_t color){
+void draw_tamagocy(uint16_t Xpos,uint16_t Ypos){
 	
 	drawer(Xpos,Ypos);
 	
@@ -303,7 +267,7 @@ void draw_menu(){
 
 
 
-void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r, uint16_t color){
+void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r){
 	
 	volatile uint16_t xleft,yleft,xright,yright,xtop,ytop,xbotton,ybotton;
 		
@@ -322,7 +286,7 @@ void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r, uint16_t color){
 	
 	
 	
-	draw_tamagocy(xc,yc,r,color);
+	draw_tamagocy(xc,yc);
 
 	//menu
 	draw_menu();
@@ -336,34 +300,14 @@ void create_tamagochy(uint16_t Xpos,uint16_t Ypos, uint16_t r, uint16_t color){
 void runaway_sequence(void){
 	uint16_t i;
 	char a[200];
-	//animazione per l'uscita
-	
-	//delete_tamagocy(xc,yc,radius,White);
-	//LCD_DrawRectangle(xc-radius,yc-radius,radius*2 +1,radius*2+1,White);
-	
 	for(i=0;i<MAX_X+radius;i+=16){
 		
-		draw_tamagocy(xc+i,yc,radius,Black);
+		draw_tamagocy(xc+i,yc);
 		
 	}
-	
-
-	
 	//LCD_DrawRectangle(0,40,240,320-40,White);
 	
 	LCD_Clear(White);
-	
-	
-	draw_tamagocy(xc,yc,radius,Black);
-
-
-	LCD_DrawRectangle_empty(139,bars_y_pos-1,bar_lenght,bar_height,Red);
-	GUI_Text(175,50 , (uint8_t *) "!  ", Red,White);
-	
-
-	
-	LCD_DrawRectangle_empty(19,bars_y_pos-1,bar_lenght,bar_height,Red);
-	GUI_Text(55,50 , (uint8_t *) "!  ", Red,White);
 	
 	
 	LCD_DrawRectangle_empty(0,270,240,50,Red);
