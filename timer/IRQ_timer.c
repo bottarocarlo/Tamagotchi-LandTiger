@@ -97,12 +97,12 @@ void TIMER2_IRQHandler(void)
 	if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
 		if((display.x < 170 && display.x > 70) && (display.y < 215 && display.y > 115)){
 			cuddles = 1;
-			LCD_DrawCircle(70, 170, 3, Red);
-			LCD_DrawCircle(115, 215, 3, Red);
-			LCD_DrawCircle(80, 150, 3, Red);
-			LCD_DrawCircle(30, 200, 3, Red);
-			LCD_DrawCircle(200, 130, 3, Red);
-			LCD_DrawCircle(170, 150, 3, Red);
+			LCD_DrawCircle(70, 170, 2, Red);
+			LCD_DrawCircle(115, 215, 2, Red);
+			LCD_DrawCircle(80, 150, 2, Red);
+			LCD_DrawCircle(30, 200, 2, Red);
+			LCD_DrawCircle(200, 130, 2, Red);
+			LCD_DrawCircle(170, 150, 2, Red);
 			//TP_DrawPoint(display.x,display.y);
 			//draw_rectangle_full(100, 100, 100, 100, 100);
 			}

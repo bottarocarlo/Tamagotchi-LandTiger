@@ -124,23 +124,15 @@ int main(void)
 			NVIC_EnableIRQ(RIT_IRQn);
 			NVIC_EnableIRQ(TIMER0_IRQn);
 		}
-		if(cuddles == 1 || cuddles == 2){
-			LCD_DrawCircle(70, 170, 3, Red);
-			LCD_DrawCircle(115, 215, 3, Red);
-			LCD_DrawCircle(80, 150, 3, Red);
-			LCD_DrawCircle(30, 200, 3, Red);
-			LCD_DrawCircle(200, 130, 3, Red);
-			LCD_DrawCircle(170, 150, 3, Red);
-			//GUI_Text(100, 110, (uint8_t *) "Cuddles",Black, White);
-		}
+		
 		if(cuddles == 3){
 			//GUI_Text(100, 110, (uint8_t *) "                    ",Black, White);
-			LCD_DrawCircle(70, 170, 3, White);
-			LCD_DrawCircle(115, 215, 3, White);
-			LCD_DrawCircle(80, 150, 3, White);
-			LCD_DrawCircle(30, 200, 3, White);
-			LCD_DrawCircle(200, 130, 3, White);
-			LCD_DrawCircle(170, 150, 3, White);
+			LCD_DrawCircle(70, 170, 2, White);
+			LCD_DrawCircle(115, 215, 2, White);
+			LCD_DrawCircle(80, 150, 2, White);
+			LCD_DrawCircle(30, 200, 2, White);
+			LCD_DrawCircle(200, 130, 2, White);
+			LCD_DrawCircle(170, 150, 2, White);
 			add_green_bar_happy();
 			cuddles = 0;
 		}

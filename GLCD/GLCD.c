@@ -1243,7 +1243,26 @@ void drawer (uint16_t posX,uint16_t posY){
 		x+=2;
 	}
 }
-
+void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color,int orientation)
+{
+	if(orientation==1 || orientation==0){
+		LCD_SetPoint(xc-x,yc+y,color);
+		LCD_SetPoint(xc-y,yc+x,color);
+		LCD_SetPoint(xc+x,yc+y,color);
+		LCD_SetPoint(xc+y,yc+x,color);
+		
+		
+		
+	}
+	if(orientation==2 || orientation==0){
+		LCD_SetPoint(xc+x,yc-y,color);
+	
+		LCD_SetPoint(xc-x,yc-y,color);
+		LCD_SetPoint(xc+y,yc-x,color);
+	
+		LCD_SetPoint(xc-y,yc-x,color);
+	}
+}
 void drawer_animation (uint16_t posX,uint16_t posY){
 	int x,y,i,color;
 	int w= GIMP_IMAGE_WIDTH_1;
@@ -1267,10 +1286,33 @@ void drawer_animation (uint16_t posX,uint16_t posY){
 }
 void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
 	
+	int x=0;
+	int y=radius;
+	int p=1-radius;
+	
+	pixel(Xpos,Ypos,x,y, color, 0 );
+	
+	while(x<y)
+	{
+		if (p < 0)
+		{
+			x++;
+			p = p + 2 * x + 1;
+		}
+		else
+		{
+			x++;
+			y--;
+			p = p + 2 * (x - y) + 1;
+		}
+		pixel(Xpos,Ypos,x,y, color,0);
+	}
+		
+	
+	/*
 	volatile double distance=0;
     volatile uint16_t i,j;
 	
-
 	
      for(i=Xpos-radius;i<=Xpos+radius;i++){
 			for(j=Ypos-radius;j<=Ypos+radius;j++){
@@ -1280,6 +1322,7 @@ void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color
         }
 				}
 		}
+	*/
 }
 void drawer_hungry (uint16_t posX,uint16_t posY){
 	int x,y,i,color;
@@ -1415,27 +1458,6 @@ void LCD_DrawRectangle_empty(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t
 			LCD_SetPoint(i-1,j,color);
 		}
 	
-}
-
-void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color,int orientation)
-{
-	if(orientation==1 || orientation==0){
-		LCD_SetPoint(xc-x,yc+y,color);
-		LCD_SetPoint(xc-y,yc+x,color);
-		LCD_SetPoint(xc+x,yc+y,color);
-		LCD_SetPoint(xc+y,yc+x,color);
-		
-		
-		
-	}
-	if(orientation==2 || orientation==0){
-		LCD_SetPoint(xc+x,yc-y,color);
-	
-		LCD_SetPoint(xc-x,yc-y,color);
-		LCD_SetPoint(xc+y,yc-x,color);
-	
-		LCD_SetPoint(xc-y,yc-x,color);
-	}
 }
 
 /*********************************************************************************************************
