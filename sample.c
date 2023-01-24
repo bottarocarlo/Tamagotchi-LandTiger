@@ -77,26 +77,7 @@ int main(void)
 
   while (1)	
   {
-		if(cuddles == 1){
-			LCD_DrawCircle(70, 170, 3, Red);
-			LCD_DrawCircle(115, 215, 3, Red);
-			LCD_DrawCircle(80, 150, 3, Red);
-			LCD_DrawCircle(30, 200, 3, Red);
-			LCD_DrawCircle(200, 130, 3, Red);
-			LCD_DrawCircle(170, 150, 3, Red);
-			//GUI_Text(100, 110, (uint8_t *) "Cuddles",Black, White);
-		}
-		if(cuddles == 3){
-			//GUI_Text(100, 110, (uint8_t *) "                    ",Black, White);
-			LCD_DrawCircle(70, 170, 3, White);
-			LCD_DrawCircle(115, 215, 3, White);
-			LCD_DrawCircle(80, 150, 3, White);
-			LCD_DrawCircle(30, 200, 3, White);
-			LCD_DrawCircle(200, 130, 3, White);
-			LCD_DrawCircle(170, 150, 3, White);
-			add_green_bar_happy();
-			cuddles = 0;
-		}
+		
 		if(time && dead==0){
 			NVIC_DisableIRQ(TIMER0_IRQn);
 			NVIC_DisableIRQ(RIT_IRQn);
@@ -143,7 +124,26 @@ int main(void)
 			NVIC_EnableIRQ(RIT_IRQn);
 			NVIC_EnableIRQ(TIMER0_IRQn);
 		}
-		
+		if(cuddles == 1 || cuddles == 2){
+			LCD_DrawCircle(70, 170, 3, Red);
+			LCD_DrawCircle(115, 215, 3, Red);
+			LCD_DrawCircle(80, 150, 3, Red);
+			LCD_DrawCircle(30, 200, 3, Red);
+			LCD_DrawCircle(200, 130, 3, Red);
+			LCD_DrawCircle(170, 150, 3, Red);
+			//GUI_Text(100, 110, (uint8_t *) "Cuddles",Black, White);
+		}
+		if(cuddles == 3){
+			//GUI_Text(100, 110, (uint8_t *) "                    ",Black, White);
+			LCD_DrawCircle(70, 170, 3, White);
+			LCD_DrawCircle(115, 215, 3, White);
+			LCD_DrawCircle(80, 150, 3, White);
+			LCD_DrawCircle(30, 200, 3, White);
+			LCD_DrawCircle(200, 130, 3, White);
+			LCD_DrawCircle(170, 150, 3, White);
+			add_green_bar_happy();
+			cuddles = 0;
+		}
 		
   }
 }

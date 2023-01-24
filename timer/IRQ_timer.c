@@ -34,9 +34,6 @@ volatile int cuddles = 0;
 void TIMER0_IRQHandler (void)
 {
 
-
-	
-	
 	//Match register 0 interrupt service routine 
 	if (LPC_TIM0->IR & 01)
 	{
@@ -100,6 +97,12 @@ void TIMER2_IRQHandler(void)
 	if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
 		if((display.x < 170 && display.x > 70) && (display.y < 215 && display.y > 115)){
 			cuddles = 1;
+			LCD_DrawCircle(70, 170, 3, Red);
+			LCD_DrawCircle(115, 215, 3, Red);
+			LCD_DrawCircle(80, 150, 3, Red);
+			LCD_DrawCircle(30, 200, 3, Red);
+			LCD_DrawCircle(200, 130, 3, Red);
+			LCD_DrawCircle(170, 150, 3, Red);
 			//TP_DrawPoint(display.x,display.y);
 			//draw_rectangle_full(100, 100, 100, 100, 100);
 			}
