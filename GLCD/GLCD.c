@@ -1286,30 +1286,10 @@ void drawer_animation (uint16_t posX,uint16_t posY){
 }
 void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color){
 	
-	int x=0;
-	int y=radius;
-	int p=1-radius;
-	
-	pixel(Xpos,Ypos,x,y, color, 0 );
-	
-	while(x<y)
-	{
-		if (p < 0)
-		{
-			x++;
-			p = p + 2 * x + 1;
-		}
-		else
-		{
-			x++;
-			y--;
-			p = p + 2 * (x - y) + 1;
-		}
-		pixel(Xpos,Ypos,x,y, color,0);
-	}
+
 		
 	
-	/*
+	
 	volatile double distance=0;
     volatile uint16_t i,j;
 	
@@ -1322,7 +1302,7 @@ void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color
         }
 				}
 		}
-	*/
+	
 }
 void drawer_hungry (uint16_t posX,uint16_t posY){
 	int x,y,i,color;
