@@ -93,10 +93,10 @@ uint16_t LCD_GetPoint(uint16_t Xpos,uint16_t Ypos);
 void LCD_SetPoint(uint16_t Xpos,uint16_t Ypos,uint16_t point);
 void PutChar( uint16_t Xpos, uint16_t Ypos, uint8_t ASCI, uint16_t charColor, uint16_t bkColor );
 void GUI_Text(uint16_t Xpos, uint16_t Ypos, uint8_t *str,uint16_t Color, uint16_t bkColor);
-
+void LCD_DrawLine(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t color);
 void LCD_DrawRectangle(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t height , uint16_t color );
 void LCD_DrawRectangle_empty(uint16_t x0, uint16_t y0, uint16_t lenght, uint16_t height , uint16_t color );
-
+void LCD_DrawCircle(uint16_t Xpos,uint16_t Ypos, uint16_t radius, uint16_t color);
 void pixel(uint16_t xc,uint16_t yc,uint16_t x,uint16_t y, uint16_t color,int orientation);
 void drawer_animation (uint16_t posX,uint16_t posY);
 void drawer(uint16_t posX,uint16_t posY);

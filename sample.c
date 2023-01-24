@@ -27,6 +27,8 @@
 #include "GLCD/GLCD.h"
 #include "./tamagocy.h"
 #include "timer/timer.h"
+#include "TouchPanel/TouchPanel.h"
+#include "adc/adc.h"
 
 #include "joystick/joystick.h"
 #include "RIT/RIT.h"
@@ -43,6 +45,7 @@ volatile int dead=0;
 volatile int time=0;
 extern int hours,minutes,seconds;
 extern int select,left,right;
+extern int cuddles;
 
 void 	action_selected(void);
 void update_time(void);
@@ -52,9 +55,11 @@ int main(void)
   SystemInit();  												/* System Initialization (i.e., PLL)  */
 	joystick_init();											/* Joystick Initialization            */
   LCD_Initialization();
-//XMAX=240  YMAX=320
-	
-	
+	//XMAX=240  YMAX=320
+	TP_Init();
+	TouchPanel_Calibrate();
+	ADC_init();	
+	LCD_Clear(White);
 
 	create_tamagochy(120,160,80);
 	
@@ -66,12 +71,32 @@ int main(void)
 	
 	init_timer(0, 0, 0, 3,0x017D7840);   //1 secondo
 	enable_timer(0);
-	
+	init_timer(2, 0, 0, 3, 0x1312D0); // 50 ms
+	enable_timer(2);
 	
 
   while (1)	
   {
-		
+		if(cuddles == 1){
+			LCD_DrawCircle(70, 170, 3, Red);
+			LCD_DrawCircle(115, 215, 3, Red);
+			LCD_DrawCircle(80, 150, 3, Red);
+			LCD_DrawCircle(30, 200, 3, Red);
+			LCD_DrawCircle(200, 130, 3, Red);
+			LCD_DrawCircle(170, 150, 3, Red);
+			//GUI_Text(100, 110, (uint8_t *) "Cuddles",Black, White);
+		}
+		if(cuddles == 3){
+			//GUI_Text(100, 110, (uint8_t *) "                    ",Black, White);
+			LCD_DrawCircle(70, 170, 3, White);
+			LCD_DrawCircle(115, 215, 3, White);
+			LCD_DrawCircle(80, 150, 3, White);
+			LCD_DrawCircle(30, 200, 3, White);
+			LCD_DrawCircle(200, 130, 3, White);
+			LCD_DrawCircle(170, 150, 3, White);
+			add_green_bar_happy();
+			cuddles = 0;
+		}
 		if(time && dead==0){
 			NVIC_DisableIRQ(TIMER0_IRQn);
 			NVIC_DisableIRQ(RIT_IRQn);

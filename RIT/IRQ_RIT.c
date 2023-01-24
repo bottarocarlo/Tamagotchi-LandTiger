@@ -15,6 +15,9 @@
 #include "../joystick/joystick.h"
 #include "../timer/timer.h"
 
+#include "../TouchPanel/TouchPanel.h"
+#include "../adc/adc.h"
+
 /******************************************************************************
 ** Function name:		RIT_IRQHandler
 **
@@ -36,7 +39,7 @@ volatile int right=0;
 
 void RIT_IRQHandler (void)
 {			
-	
+		ADC_start_conversion();
 
 	if((LPC_GPIO1->FIOPIN & (1<<29)) == 0){ //select
 			select++;

@@ -484,10 +484,11 @@ void TouchPanel_Calibrate(void)
 	
   for(i=0;i<3;i++)
   {     
-   //#ifndef SIMULATOR
-	 //DelayUS(1000 * 500);
-		DelayUS(500);
-	 //#endif	
+   #ifndef SIMULATOR
+	 DelayUS(1000 * 500);
+	 #else
+	 DelayUS(1000 * 50);
+	 #endif	
    DrawCross(DisplaySample[i].x,DisplaySample[i].y);
    do
    {

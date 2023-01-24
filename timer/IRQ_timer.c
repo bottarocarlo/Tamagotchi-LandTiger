@@ -11,7 +11,7 @@
 #include "lpc17xx.h"
 #include "timer.h"
 #include "../GLCD/GLCD.h" 
-
+#include "../TouchPanel/TouchPanel.h"
 #include "../tamagocy.h"
 
 
@@ -29,7 +29,7 @@ volatile int minutes=0;
 volatile int hours=0;
 
 extern int time;
-
+volatile int cuddles = 0;
 
 void TIMER0_IRQHandler (void)
 {
@@ -51,6 +51,9 @@ void TIMER0_IRQHandler (void)
 			}
 			minutes++;
 			
+		}
+		if(cuddles == 1 || cuddles == 2){
+		cuddles++;
 		}
 		seconds++;
 		time=1;
@@ -89,31 +92,22 @@ void TIMER1_IRQHandler (void)
 ** Returned value:		None
 **
 ******************************************************************************/
-void TIMER2_IRQHandler (void)
+void TIMER2_IRQHandler(void)
 {
 	
-	//matchreg0
-	if (LPC_TIM2->IR == 1)
-	{
-		
-		LPC_TIM2->IR = 1;			/* clear interrupt flag */
+	//Match register 0
+	if (LPC_TIM2->IR & 01){
+	if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
+		if((display.x < 170 && display.x > 70) && (display.y < 215 && display.y > 115)){
+			cuddles = 1;
+			//TP_DrawPoint(display.x,display.y);
+			//draw_rectangle_full(100, 100, 100, 100, 100);
+			}
+		}
 	}
-		/* Match register 1 interrupt service routine */
-	else if(LPC_TIM2->IR == 2)
-  {
-	
-
-		LPC_TIM2->IR =  2 ;			/* clear interrupt flag */	
-
-	
-
-	}
-	
-  return;
+	LPC_TIM2->IR = 1; /* clear interrupt flag */
+	return;
 }
-
-
-
 
 
 /******************************************************************************

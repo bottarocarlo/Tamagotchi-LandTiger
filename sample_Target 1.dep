@@ -1,7 +1,7 @@
 Dependencies for Project 'sample', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\startup_LPC17xx.s)(0x63B69919)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (.\sample.c)(0x63BC1909)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
+F (.\startup_LPC17xx.s)(0x63CF8A3A)(--cpu Cortex-M3 -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 536" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
+F (.\sample.c)(0x63CF993B)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -11,14 +11,17 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (GLCD/GLCD.h)(0x63B98D4D)
-I (./tamagocy.h)(0x63BC1909)
-I (timer/timer.h)(0x63B6991A)
-I (joystick/joystick.h)(0x63B6991A)
-I (RIT/RIT.h)(0x63B6991A)
-F (.\core_cm3.c)(0x63B69918)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
+I (GLCD/GLCD.h)(0x63CF93C8)
+I (./tamagocy.h)(0x63CF8A3A)
+I (timer/timer.h)(0x63CF8A3A)
+I (TouchPanel/TouchPanel.h)(0x63CF8D5A)
+I (adc/adc.h)(0x63CF8D5A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
+I (joystick/joystick.h)(0x63CF8A39)
+I (RIT/RIT.h)(0x63CF8A39)
+F (.\core_cm3.c)(0x63CF8A39)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
-F (.\system_LPC17xx.c)(0x63B69919)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
+F (.\system_LPC17xx.c)(0x63CF8A3A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -27,7 +30,7 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (.\timer\IRQ_timer.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
+F (.\timer\IRQ_timer.c)(0x63CF993C)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
@@ -37,10 +40,11 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (timer\timer.h)(0x63B6991A)
-I (timer\../GLCD/GLCD.h)(0x63B98D4D)
-I (timer\../tamagocy.h)(0x63BC1909)
-F (.\timer\lib_timer.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
+I (timer\timer.h)(0x63CF8A3A)
+I (timer\../GLCD/GLCD.h)(0x63CF93C8)
+I (timer\../TouchPanel/TouchPanel.h)(0x63CF8D5A)
+I (timer\../tamagocy.h)(0x63CF8A3A)
+F (.\timer\lib_timer.c)(0x63CF8A3A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -49,16 +53,16 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (timer\timer.h)(0x63B6991A)
-F (.\timer\timer.h)(0x63B6991A)()
-F (.\GLCD\AsciiLib.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\asciilib.o --omf_browse .\asciilib.crf --depend .\asciilib.d)
-I (GLCD\AsciiLib.h)(0x63B6991A)
+I (timer\timer.h)(0x63CF8A3A)
+F (.\timer\timer.h)(0x63CF8A3A)()
+F (.\GLCD\AsciiLib.c)(0x63CF8A38)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\asciilib.o --omf_browse .\asciilib.crf --depend .\asciilib.d)
+I (GLCD\AsciiLib.h)(0x63CF8A38)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
-F (.\GLCD\AsciiLib.h)(0x63B6991A)()
-F (.\GLCD\GLCD.c)(0x63B98D4D)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
+F (.\GLCD\AsciiLib.h)(0x63CF8A38)()
+F (.\GLCD\GLCD.c)(0x63CF92B8)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602585E4)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x602585E4)
-I (GLCD\GLCD.h)(0x63B98D4D)
+I (GLCD\GLCD.h)(0x63CF93C8)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -67,18 +71,18 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (GLCD\AsciiLib.h)(0x63B6991A)
+I (GLCD\AsciiLib.h)(0x63CF8A38)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x602585E8)
-I (GLCD\../timer/timer.h)(0x63B6991A)
-I (GLCD\../RIT/RIT.h)(0x63B6991A)
-F (.\GLCD\GLCD.h)(0x63B98D4D)()
-F (.\GLCD\HzLib.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\hzlib.o --omf_browse .\hzlib.crf --depend .\hzlib.d)
-I (GLCD\HzLib.h)(0x63B6991A)
+I (GLCD\../timer/timer.h)(0x63CF8A3A)
+I (GLCD\../RIT/RIT.h)(0x63CF8A39)
+F (.\GLCD\GLCD.h)(0x63CF93C8)()
+F (.\GLCD\HzLib.c)(0x63CF8A39)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\hzlib.o --omf_browse .\hzlib.crf --depend .\hzlib.d)
+I (GLCD\HzLib.h)(0x63CF8A39)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
-F (.\GLCD\HzLib.h)(0x63B6991A)()
-F (.\tamagocy.c)(0x63BC1909)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\tamagocy.o --omf_browse .\tamagocy.crf --depend .\tamagocy.d)
-I (GLCD/GLCD.h)(0x63B98D4D)
+F (.\GLCD\HzLib.h)(0x63CF8A39)()
+F (.\tamagocy.c)(0x63CF8A3A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\tamagocy.o --omf_browse .\tamagocy.crf --depend .\tamagocy.d)
+I (GLCD/GLCD.h)(0x63CF93C8)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -87,10 +91,10 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (tamagocy.h)(0x63BC1909)
-I (timer/timer.h)(0x63B6991A)
-I (RIT/RIT.h)(0x63B6991A)
-F (.\RIT\IRQ_RIT.c)(0x63B69CAB)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
+I (tamagocy.h)(0x63CF8A3A)
+I (timer/timer.h)(0x63CF8A3A)
+I (RIT/RIT.h)(0x63CF8A39)
+F (.\RIT\IRQ_RIT.c)(0x63CF9599)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_rit.o --omf_browse .\irq_rit.crf --depend .\irq_rit.d)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -99,12 +103,15 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (RIT\RIT.h)(0x63B6991A)
-I (RIT\../GLCD/GLCD.h)(0x63B98D4D)
-I (RIT\../tamagocy.h)(0x63BC1909)
-I (RIT\../joystick/joystick.h)(0x63B6991A)
-I (RIT\../timer/timer.h)(0x63B6991A)
-F (.\RIT\lib_RIT.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_rit.o --omf_browse .\lib_rit.crf --depend .\lib_rit.d)
+I (RIT\RIT.h)(0x63CF8A39)
+I (RIT\../GLCD/GLCD.h)(0x63CF93C8)
+I (RIT\../tamagocy.h)(0x63CF8A3A)
+I (RIT\../joystick/joystick.h)(0x63CF8A39)
+I (RIT\../timer/timer.h)(0x63CF8A3A)
+I (RIT\../TouchPanel/TouchPanel.h)(0x63CF8D5A)
+I (RIT\../adc/adc.h)(0x63CF8D5A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
+F (.\RIT\lib_RIT.c)(0x63CF8A39)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_rit.o --omf_browse .\lib_rit.crf --depend .\lib_rit.d)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -113,10 +120,10 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (RIT\RIT.h)(0x63B6991A)
-F (.\RIT\RIT.h)(0x63B6991A)()
-F (.\joystick\joystick.h)(0x63B6991A)()
-F (.\joystick\lib_joystick.c)(0x63B6991A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
+I (RIT\RIT.h)(0x63CF8A39)
+F (.\RIT\RIT.h)(0x63CF8A39)()
+F (.\joystick\joystick.h)(0x63CF8A39)()
+F (.\joystick\lib_joystick.c)(0x63CF8A39)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_joystick.o --omf_browse .\lib_joystick.crf --depend .\lib_joystick.d)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
@@ -125,4 +132,39 @@ I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cms
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
 I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-I (joystick\joystick.h)(0x63B6991A)
+I (joystick\joystick.h)(0x63CF8A39)
+F (.\TouchPanel\TouchPanel.c)(0x63CF8D5A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\touchpanel.o --omf_browse .\touchpanel.crf --depend .\touchpanel.d)
+I (TouchPanel\../GLCD/GLCD.h)(0x63CF93C8)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (TouchPanel\../TouchPanel/TouchPanel.h)(0x63CF8D5A)
+F (.\TouchPanel\TouchPanel.h)(0x63CF8D5A)()
+F (.\adc\adc.h)(0x63CF8D5A)()
+F (.\adc\IRQ_adc.c)(0x63CF8D5A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_adc.o --omf_browse .\irq_adc.crf --depend .\irq_adc.d)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (adc\adc.h)(0x63CF8D5A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
+F (.\adc\lib_adc.c)(0x63CF8D5A)(-c --cpu Cortex-M3 -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include-IC:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="536" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_adc.o --omf_browse .\lib_adc.crf --depend .\lib_adc.d)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm3.h)(0x60D44B52)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602585EE)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D44B52)
+I (C:\Users\carlo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (adc\adc.h)(0x63CF8D5A)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602585EE)
